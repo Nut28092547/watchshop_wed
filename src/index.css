@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Maitree", serif;
+}
+
+/* เพิ่มในไฟล์ CSS ของคุณ */
+.alert-message {
+  position: fixed;
+  top: 0;
+  left: 2;
+  right: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  z-index: 1000; /* ให้ข้อความอยู่ด้านหน้า */
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* เพิ่มข้อความแจ้งเตือนให้เด้งขึ้น */
+.alert-message {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
